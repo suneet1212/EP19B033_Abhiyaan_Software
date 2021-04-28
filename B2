@@ -1,0 +1,5 @@
+This issue can be tackled using kalman filters.
+Kalman filters is a way in which we can take expected value and the sensor data and combine both of them using the kalman gain parameter. This parameter decides how much of the sensor data is to be believed. If we trust the measured value more then a higher kalman gain and vice versa.
+The method is that every time step we take the input, calculate the kalman gain from the error in the estimates and the error in the data. Then use this kalman gain to find the new estimate from the previous estimate and the measured value. Then finally find the new error in the estimate from the kalman gainand the current estimate value.
+
+This method quickly converges to a fairly accurate value and thus it may help us when we are unsure of the sensor inputs that we are getting.
